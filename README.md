@@ -1,49 +1,68 @@
-# Talljack.github.io
-github page to store static resources
+# Astro Starter Kit: Blog
 
+```sh
+npm create astro@latest -- --template blog
+```
 
-<p align="center">
-<a href="https://twitter.com/YugangCao"><img
-    alt="X"
-    height="22px"
-    src="https://img.shields.io/badge/TW-1b95e0?style=for-the-badge&logo=x&logoColor=white&logoWidth=16"
-/></a>
-<span>&nbsp;</span>
-  <a href="https://t.me/yugangcao"><img
-    alt="Telegram"
-    height="22px"
-    src="https://img.shields.io/badge/TG-2CA5E0?style=for-the-badge&logo=telegram"
-/></a>
-<span>&nbsp;</span>
-  <a href="https://redirect.surmon.me/discord-server"><img
-    alt="Discord"
-    height="22px"
-    src="https://img.shields.io/badge/DC-5865f2?style=for-the-badge&logo=discord&logoColor=white&logoWidth=12"
-/></a>
-</p>
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/blog)
+[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/blog)
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/blog/devcontainer.json)
 
-<div>
-  <img height="200em" src="https://github-readme-stats.vercel.app/api?username=Talljack&show_icons=true&layout=compact&hide=stars&count_private=true" alt="caoyugang's GitHub Stats"/>
-  <img height="200em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Talljack&layout=compact&count_private=true&hide=html" />
-</div>
+> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
 
+![blog](https://github.com/withastro/astro/assets/2244813/ff10799f-a816-4703-b967-c78997e8323d)
 
-## Projects
-<!-- 
-- [naive-ui](https://github.com/tusen-ai/naive-ui)
-- [vue3-hotkey](https://github.com/Talljack/vue3-hotKey)
-- [vscode-auto-space](https://github.com/Talljack/vscode-auto-space)
-- [monaco-editor-component](https://github.com/Talljack/monaco-editor-component) -->
-| &nbsp; | project | homepage | stars | last commit | downloads | version |
-| :---: | :--- | --- | :--- | :--- | :--- | :--- |
-| <a href="https://github.com/tusen-ai/naive-ui"><img src="https://www.naiveui.com/assets/naivelogo-93278402.svg" height="14px" /></a>| [Naive-ui](https://github.com/tusen-ai/naive-ui)| [#readme](https://github.com/tusen-ai/naive-ui#readme) | [![GitHub stars](https://img.shields.io/github/stars/tusen-ai/naive-ui?style=flat)](https://github.com/tusen-ai/naive-ui/stargazers) | [![GitHub last commit](https://img.shields.io/github/last-commit/tusen-ai/naive-ui?style=flat&label=last)](https://github.com/monaco-editor-component/commits) | [![NPM downloads](https://img.shields.io/npm/dm/naive-ui?style=flat&label=&color=cb3837&labelColor=cb0000&logo=npm)](https://www.npmjs.com/package/monaco-editor-component) | ![GitHub package version](https://img.shields.io/github/package-json/v/tusen-ai/naive-ui/main?style=flat&label=&labelColor=555&logo=github)
-| <a href="https://github.com/Talljack/monaco-editor-component"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1150px-React-icon.svg.png" height="14px" /></a>| [monaco-editor-component](https://github.com/Talljack/monaco-editor-component)| [#readme](https://github.com/Talljack/monaco-editor-component#readme) | [![GitHub stars](https://img.shields.io/github/stars/Talljack/monaco-editor-component?style=flat)](https://github.com/Talljack/monaco-editor-component/stargazers) | [![GitHub last commit](https://img.shields.io/github/last-commit/Talljack/monaco-editor-component?style=flat&label=last)](https://github.com/monaco-editor-component/commits) | [![NPM downloads](https://img.shields.io/npm/dm/monaco-editor-component?style=flat&label=&color=cb3837&labelColor=cb0000&logo=npm)](https://www.npmjs.com/package/monaco-editor-component) | ![GitHub package version](https://img.shields.io/github/package-json/v/Talljack/monaco-editor-component/main?style=flat&label=&labelColor=555&logo=github)
-| <a href="https://github.com/Talljack/vue3-hotkey"><img src="https://seeklogo.com/images/V/vuejs-logo-17D586B587-seeklogo.com.png" height="14px" /></a>| [vue3-hotkey](https://github.com/Talljack/vue3-hotkey)| [#readme](https://github.com/Talljack/vue3-hotkey#readme) | [![GitHub stars](https://img.shields.io/github/stars/Talljack/vue3-hotkey?style=flat)](https://github.com/Talljack/vue3-hotkey/stargazers) | [![GitHub last commit](https://img.shields.io/github/last-commit/Talljack/vue3-hotkey?style=flat&label=last)](https://github.com/vue3-hotkey/commits) | [![NPM downloads](https://img.shields.io/npm/dm/vue3-hotkey?style=flat&label=&color=cb3837&labelColor=cb0000&logo=npm)](https://www.npmjs.com/package/vue3-hotkey) | ![GitHub package version](https://img.shields.io/github/package-json/v/Talljack/vue3-hotkey/main?style=flat&label=&labelColor=555&logo=github)
-| <a href="https://github.com/Talljack/vscode-auto-space"><img src="https://github.com/Talljack/vscode-auto-space/raw/main/res/icon.png" height="14px" /></a>| [vscode-auto-space](https://github.com/Talljack/vscode-auto-space)| [#readme](https://github.com/Talljack/vscode-auto-space#readme) | [![GitHub stars](https://img.shields.io/github/stars/Talljack/vscode-auto-space?style=flat)](https://github.com/Talljack/vscode-auto-space/stargazers) | [![GitHub last commit](https://img.shields.io/github/last-commit/Talljack/vscode-auto-space?style=flat&label=last)](https://github.com/vscode-auto-space/commits) | [![NPM downloads](https://img.shields.io/npm/dm/vscode-auto-space?style=flat&label=&color=cb3837&labelColor=cb0000&logo=npm)](https://www.npmjs.com/package/vscode-auto-space) | ![GitHub package version](https://img.shields.io/github/package-json/v/Talljack/vscode-auto-space/main?style=flat&label=&labelColor=555&logo=github)
+Features:
 
+- ✅ Minimal styling (make it your own!)
+- ✅ 100/100 Lighthouse performance
+- ✅ SEO-friendly with canonical URLs and OpenGraph data
+- ✅ Sitemap support
+- ✅ RSS Feed support
+- ✅ Markdown & MDX support
 
-## Templates
+## 🚀 Project Structure
 
-- [starter-ts-lib](https://github.com/Talljack/starter-ts-lib)
-- [chrome-extension-starter](https://github.com/Talljack/chrome-extension-starter)
-- [tauri-react-template](https://github.com/Talljack/tauri-react-template)
+Inside of your Astro project, you'll see the following folders and files:
+
+```text
+├── public/
+├── src/
+│   ├── components/
+│   ├── content/
+│   ├── layouts/
+│   └── pages/
+├── astro.config.mjs
+├── README.md
+├── package.json
+└── tsconfig.json
+```
+
+Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+
+There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+
+The `src/content/` directory contains "collections" of related Markdown and MDX documents. Use `getCollection()` to retrieve posts from `src/content/blog/`, and type-check your frontmatter using an optional schema. See [Astro's Content Collections docs](https://docs.astro.build/en/guides/content-collections/) to learn more.
+
+Any static assets, like images, can be placed in the `public/` directory.
+
+## 🧞 Commands
+
+All commands are run from the root of the project, from a terminal:
+
+| Command                   | Action                                           |
+| :------------------------ | :----------------------------------------------- |
+| `npm install`             | Installs dependencies                            |
+| `npm run dev`             | Starts local dev server at `localhost:4321`      |
+| `npm run build`           | Build your production site to `./dist/`          |
+| `npm run preview`         | Preview your build locally, before deploying     |
+| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
+| `npm run astro -- --help` | Get help using the Astro CLI                     |
+
+## 👀 Want to learn more?
+
+Check out [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+
+## Credit
+
+This theme is based off of the lovely [Bear Blog](https://github.com/HermanMartinus/bearblog/).
