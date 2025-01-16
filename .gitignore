@@ -18,3 +18,11 @@ pnpm-debug.log*
 
 # macOS-specific files
 .DS_Store
+
+# IDE
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
