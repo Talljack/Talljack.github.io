@@ -7,8 +7,12 @@ import rehypeExternalLinks from 'rehype-external-links'
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://astro-blog-template.netlify.app',
-  integrations: [mdx(), svelte()],
+  site: 'https://talljack.github.io',
+  base: '/',
+  integrations: [
+    svelte(),
+    mdx()
+  ],
   markdown: {
     shikiConfig: {
       theme: 'nord',
