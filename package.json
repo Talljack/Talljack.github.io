@@ -1,20 +1,20 @@
 {
-  "name": "terrestrial-trappist",
-  "type": "module",
+  "name": "new-template",
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro check && astro build",
+    "build": "astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/mdx": "^2.1.0",
-    "@astrojs/rss": "^4.0.4",
-    "@astrojs/sitemap": "^3.0.5",
-    "astro": "^4.2.6",
-    "@astrojs/check": "^",
-    "typescript": "^"
+    "@astrojs/mdx": "^4.0.6",
+    "@astrojs/svelte": "^5.7.3",
+    "astro": "^5.1.7",
+    "reading-time": "^1.5.0",
+    "rehype-external-links": "^3.0.0",
+    "remark-gfm": "^4.0.0",
+    "remark-smartypants": "^3.0.2"
   }
 }
