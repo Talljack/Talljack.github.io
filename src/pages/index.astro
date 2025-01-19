@@ -1,16 +1,19 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 
-const title = 'My Astro Blog';
-const description = 'The perfect starter for your perfect blog.';
+const title = 'Talljack blog';
+const description = '分享编程见解，记录技术成长';
 const permalink = Astro.site.href;
 ---
 
 <BaseLayout title={title} description={description} permalink={permalink}>
   <div class="home-container">
     <div class="home-copy">
-      <h1>Welcome to my Blog</h1>
-      <p>Check out the docs on <a href="https://www.github.com/Charca/astro-blog-template" target="_blank" rel="noopener">GitHub</a> to get started.</p>
+      <h1>分享编程见解，记录技术成长</h1>
+      <div class="cta-buttons">
+        <a href="/blog" class="primary-button">阅读博客</a>
+        <a href="/about" class="secondary-button">了解更多</a>
+      </div>
     </div>
 
     <div class="hero-image-container">
@@ -41,6 +44,32 @@ const permalink = Astro.site.href;
   .home-copy {
     flex: 1;
     padding: 0 1em;
+  }
+
+  .cta-buttons {
+    display: flex;
+    gap: 1em;
+  }
+
+  .primary-button {
+    padding: 1rem 2rem;
+    background: var(--primary-color);
+    color: white;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: transform 0.2s;
+  }
+
+  .primary-button:hover {
+    transform: translateY(-2px);
+  }
+
+  .secondary-button {
+    padding: 1rem 2rem;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    border-radius: 8px;
+    font-weight: 600;
   }
 
   .home-copy h1 {
