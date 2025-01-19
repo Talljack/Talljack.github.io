@@ -1,23 +1,30 @@
 <script>
-  const rootEl = typeof document !== 'undefined' ? document.documentElement : null;
-  const themes = ['light', 'dark'];
+  import { onMount } from 'svelte'
+  let rootEl
+  const themes = ['light', 'dark']
   let theme = ''
-
-  if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
-    theme = localStorage.getItem('theme');
-  } else if (typeof window !== 'undefined' && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-    theme = 'dark';
-  }
+  onMount(() => {
+    rootEl = document.documentElement
+    if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
+      theme = localStorage.getItem('theme')
+    } else if (typeof window !== 'undefined' && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      theme = 'dark'
+    }
+  })
 
   function handleChange(event) {
-    theme = event.target.value;
-    localStorage.setItem('theme', theme);
+    const theme = event.target.value
+    localStorage.setItem('theme', theme)
+    updateTheme(theme)
   }
 
-  $: if (rootEl && theme === 'light') {
-    rootEl.classList.remove('theme-dark');
-  } else if (rootEl && theme === 'dark') {
-    rootEl.classList.add('theme-dark');
+  function updateTheme(newTheme) {
+    if (!rootEl) return
+    if (newTheme === 'light') {
+      rootEl.classList.remove('theme-dark')
+    } else {
+      rootEl.classList.add('theme-dark')
+    }
   }
 
   const icons = [
@@ -43,23 +50,14 @@
     >
       <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
     </svg>`,
-  ];
+  ]
 </script>
-
 
 <div class="theme-toggle">
   {#each themes as t, i}
     <label class={theme === t ? 'checked' : ''}>
       {@html icons[i]}
-      <input
-        type="radio"
-        name="theme-toggle"
-        checked={theme === t}
-        value={t}
-        title={`Use ${t} theme`}
-        aria-label={`Use ${t} theme`}
-        on:change={handleChange}
-      />
+      <input type="radio" name="theme-toggle" checked={theme === t} value={t} title={`Use ${t} theme`} aria-label={`Use ${t} theme`} on:change={handleChange} />
     </label>
   {/each}
 </div>
