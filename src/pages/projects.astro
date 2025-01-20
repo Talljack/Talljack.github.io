@@ -1,0 +1,151 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const title = '项目';
+const description = '我的开源项目和作品展示';
+const permalink = `${Astro.site.href}projects`;
+---
+
+<BaseLayout title={title} description={description} permalink={permalink} current="projects">
+  <div class="projects-container">
+    <h1 class="page-title">我的项目</h1>
+    <div class="projects-grid">
+      <div class="project-card">
+        <div class="project-content">
+          <h2 class="project-title">
+            <a href="https://github.com/Talljack/monaco-editor-component" target="_blank" rel="noopener">monaco-editor-component</a>
+          </h2>
+          <p class="project-description">Monaco Editor 的 React 组件封装，支持主题切换、语言高亮等特性</p>
+          <div class="project-tags">
+            <span class="tag">React</span>
+            <span class="tag">TypeScript</span>
+            <span class="tag">Monaco Editor</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-content">
+          <h2 class="project-title">
+            <a href="https://github.com/Talljack/vue3-hotkey" target="_blank" rel="noopener">vue3-hotkey</a>
+          </h2>
+          <p class="project-description">Vue3 的键盘输入 hooks 库，提供简单易用的快捷键绑定功能</p>
+          <div class="project-tags">
+            <span class="tag">Vue3</span>
+            <span class="tag">TypeScript</span>
+            <span class="tag">Hooks</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-content">
+          <h2 class="project-title">
+            <a href="https://github.com/Talljack/unplugin-remove" target="_blank" rel="noopener">unplugin-remove</a>
+          </h2>
+          <p class="project-description">用于移除代码的 Vite/Webpack 插件，支持条件编译和代码清理</p>
+          <div class="project-tags">
+            <span class="tag">Vite</span>
+            <span class="tag">Webpack</span>
+            <span class="tag">Plugin</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .projects-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  .page-title {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--text-primary);
+  }
+
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+
+  .project-card {
+    background: var(--card-background);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .project-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .project-image {
+    width: 150px;
+    height: 150px;
+  }
+
+  .project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .project-content {
+    padding: 1.5rem;
+  }
+
+  .project-title {
+    margin: 0 0 1rem 0;
+    font-size: 1.5rem;
+  }
+
+  .project-title a {
+    color: var(--primary-color);
+    text-decoration: none;
+  }
+
+  .project-title a:hover {
+    text-decoration: underline;
+  }
+
+  .project-description {
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+    line-height: 1.5;
+  }
+
+  .project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .tag {
+    background: var(--tag-background);
+    color: var(--tag-color);
+    padding: 0.25rem 0.75rem;
+    border-radius: 15px;
+    font-size: 0.9rem;
+  }
+
+  @media (max-width: 768px) {
+    .projects-container {
+      padding: 1rem;
+    }
+
+    .projects-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .project-image {
+      height: 180px;
+    }
+  }
+</style>
