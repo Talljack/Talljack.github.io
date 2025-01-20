@@ -1,48 +1,170 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 
-const title = 'About';
-const description = 'About your blog.';
+const title = '关于我';
+const description = 'Full Stack Developer, Focus on AI/App';
 const permalink = `${Astro.site.href}about`;
 ---
 
 <BaseLayout title={title} description={description} permalink={permalink} current="about">
-  <div class="container">
-    <h1>About</h1>
-    <figure class="about-image">
-      <img src="/assets/about-illustration.webp" alt="Illustration of a notebook" width="330">
-      <figcaption>
-        Illustration by
-        <a href="https://icons8.com/illustrations/author/5c07e68d82bcbc0092519bb6" target="_blank" rel="noopener">Icons 8</a>
-        from
-        <a href="https://icons8.com/illustrations" target="_blank" rel="noopener">Ouch!</a>
-      </figcaption>
-    </figure>
-    <p>Text placeholder via <a href="https://jeffsum.com/" target="_blank">Jeffsum</a>.</p>
-    <p>So you two dig up, dig up dinosaurs? What do they got in there? King Kong? My dad once told me, laugh and the world laughs with you, Cry, and I'll give you something to cry about you little bastard! Life finds a way. God creates dinosaurs. God destroys dinosaurs. God creates Man. Man destroys God. Man creates Dinosaurs.</p>
-    <p>You really think you can fly that thing? You know what? It is beets. I've crashed into a beet truck. Forget the fat lady! You're obsessed with the fat lady! Drive us out of here! Is this my espresso machine? Wh-what is-h-how did you get my espresso machine?</p>
-    <p>Hey, you know how I'm, like, always trying to save the planet? Here's my chance. Hey, take a look at the earthlings. Goodbye! I was part of something special. Just my luck, no ice. You're a very talented young man, with your own clever thoughts and ideas. Do you need a manager?</p>
-    <p>Jaguar shark! So tell me - does it really exist? This thing comes fully loaded. AM/FM radio, reclining bucket seats, and... power windows. Yes, Yes, without the oops! You're a very talented young man, with your own clever thoughts and ideas. Do you need a manager?</p>
-    <p>Yes, Yes, without the oops! Do you have any idea how long it takes those cups to decompose. They're using our own satellites against us. And the clock is ticking. Do you have any idea how long it takes those cups to decompose. My dad once told me, laugh and the world laughs with you, Cry, and I'll give you something to cry about you little bastard!</p>
+  <div class="about-container">
+    <div class="profile-section">
+      <div class="avatar-container">
+        <img src="assets/profile-pic.jpeg" alt="Yugang Cao" class="avatar" />
+      </div>
+      <h1>Yugang Cao (Talljack)</h1>
+      <div class="bio">Full Stack Developer, Focus on AI/App</div>
+      <div class="social-links">
+        <a href="https://github.com/Talljack" target="_blank" rel="noopener" class="social-link">
+          <svg viewBox="0 0 24 24" width="24" height="24">
+            <path fill="currentColor" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+          </svg>
+        </a>
+        <a href="https://twitter.com/YugangCao" target="_blank" rel="noopener" class="social-link">
+          <svg viewBox="0 0 24 24" width="24" height="24">
+            <path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="content-section">
+      <section class="about-section">
+        <h2>👋 Hello</h2>
+        <p>我是一名全栈开发者，专注于 AI 和 App 开发。热爱开源，乐于分享技术经验。</p>
+      </section>
+
+      <section class="about-section">
+        <h2>💻 技术栈</h2>
+        <div class="skills">
+          <span class="skill-tag">React</span>
+          <span class="skill-tag">Vue</span>
+          <span class="skill-tag">Node.js</span>
+          <span class="skill-tag">Go</span>
+          <span class="skill-tag">Rust</span>
+          <span class="skill-tag">App Development</span>
+          <span class="skill-tag">AI</span>
+        </div>
+      </section>
+
+      <section class="about-section">
+        <h2>🚀 开源项目</h2>
+        <div class="projects">
+          <div class="project-card">
+            <h3><a href="https://github.com/Talljack/monaco-editor-component" target="_blank" rel="noopener">monaco-editor-component</a></h3>
+            <p>Monaco Editor 的 React 组件封装</p>
+          </div>
+          <div class="project-card">
+            <h3><a href="https://github.com/Talljack/vue3-hotkey" target="_blank" rel="noopener">vue3-hotkey</a></h3>
+            <p>Vue3 的键盘输入 hooks 库</p>
+          </div>
+          <div class="project-card">
+            <h3><a href="https://github.com/Talljack/unplugin-remove" target="_blank" rel="noopener">unplugin-remove</a></h3>
+            <p>用于移除代码的 Vite/Webpack 插件</p>
+          </div>
+        </div>
+      </section>
+    </div>
   </div>
 </BaseLayout>
 
 <style>
-  .about-image {
-    float: right;
-    margin: -3em -7em 2em 2em;
-    max-width: 300px;
+  .about-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
   }
 
-  .about-image img {
-    border-radius: 8px;
-    margin-bottom: 1.5em;
+  .profile-section {
+    text-align: center;
+    margin-bottom: 3rem;
   }
 
-  @media (max-width: 1020px) {
-    .about-image {
-      float: none;
-      margin: 0 auto 2em;
+  .avatar-container {
+    margin-bottom: 1rem;
+  }
+
+  .avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .bio {
+    color: var(--text-secondary);
+    margin: 1rem 0;
+  }
+
+  .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .social-link {
+    color: var(--text-secondary);
+    transition: color 0.2s;
+  }
+
+  .social-link:hover {
+    color: var(--primary-color);
+  }
+
+  .about-section {
+    margin-bottom: 3rem;
+  }
+
+  .about-section h2 {
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+  }
+
+  .skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .skill-tag {
+    background: var(--tag-background);
+    color: var(--tag-color);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+  }
+
+  .projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .project-card {
+    background: var(--card-background);
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .project-card h3 {
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+  }
+
+  .project-card p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+  }
+
+  @media (max-width: 768px) {
+    .about-container {
+      padding: 1rem;
+    }
+
+    .projects {
+      grid-template-columns: 1fr;
     }
   }
 </style>

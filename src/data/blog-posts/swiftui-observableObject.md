@@ -1,7 +1,7 @@
 ---
 title: SwiftUI 中的状态管理：@Observable vs ObservableObject 深度解析
 publishDate: 19 Jan 2025
-description: 在 SwiftUI 的开发中，状态管理一直是一个核心话题。随着 Swift 5.9 的发布，Apple 推出了新的 @Observable 宏，为我们提供了比 ObservableObject 更简洁的状态管理方案。在实际开发中，选择合适的状态管理方案直接影响着应用的性能和可维护性。理解这两种方案的区别和适用场景，能帮助开发者做出更明智的技术选择，避免在后期重构时付出更大的代价。本文将深入探讨这两种方案的区别、使用场景以及最佳实践。
+description: SwiftUI 中的状态管理, 关于 @Observable vs ObservableObject 该如何选择合适的状态管理方案
 ---
 
 ![SwiftUI 中的状态管理：@Observable vs ObservableObject 深度解析](/assets/blog/swiftui-observableObject.png)
