@@ -1,0 +1,103 @@
+---
+import AppLayout from '../../layouts/AppLayout.astro'
+
+const title = 'Privacy Policy - MeowMemo'
+const description = 'Privacy policy for MeowMemo app'
+---
+
+<AppLayout title={title} description={description} current="meowmemo/privacy">
+  <div class="policy-container">
+    <h1>Privacy Policy</h1>
+    <p class="last-updated">Last updated: {new Date().toLocaleDateString()}</p>
+
+    <section>
+      <h2>Data Collection and Usage</h2>
+      <p>MeowMemo takes your privacy seriously. This policy describes how we collect and use your data:</p>
+
+      <h3>Data We Collect</h3>
+      <ul>
+        <li>User-provided content (subscriptions, assets, notes)</li>
+        <li>App usage data for improving user experience</li>
+        <li>Crash reports and performance data</li>
+      </ul>
+
+      <h3>How We Use Your Data</h3>
+      <ul>
+        <li>To provide and maintain the service</li>
+        <li>To improve the app functionality</li>
+        <li>To send notifications you requested</li>
+      </ul>
+
+      <h3>Data Storage</h3>
+      <ul>
+        <li>All personal data is stored locally on your device</li>
+        <li>iCloud sync is optional and uses your personal iCloud account</li>
+        <li>We do not have access to your personal data</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Your Rights</h2>
+      <p>You have the right to:</p>
+      <ul>
+        <li>Access your data</li>
+        <li>Delete your data</li>
+        <li>Opt-out of data collection</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Contact Us</h2>
+      <p>
+        If you have any questions about this Privacy Policy, please contact us at:
+        <a href="mailto:yugang.cao12@gmail.com">yugang.cao12@gmail.com</a>
+      </p>
+    </section>
+  </div>
+</AppLayout>
+
+<style>
+  .policy-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  h1 {
+    margin-bottom: 1rem;
+  }
+
+  .last-updated {
+    color: var(--text-secondary);
+    margin-bottom: 3rem;
+  }
+
+  section {
+    margin-bottom: 3rem;
+  }
+
+  h2 {
+    margin-bottom: 1.5rem;
+    color: var(--text-primary);
+  }
+
+  h3 {
+    margin: 1.5rem 0 1rem;
+    color: var(--text-primary);
+  }
+
+  ul {
+    list-style-type: disc;
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  li {
+    margin-bottom: 0.5rem;
+    color: var(--text-secondary);
+  }
+
+  a {
+    color: var(--primary-color);
+  }
+</style>
