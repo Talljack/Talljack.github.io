@@ -1,0 +1,146 @@
+---
+import AppLayout from '../../layouts/AppLayout.astro';
+
+const title = 'MeowMemo - Smart Subscription Manager and Asset Management Assistant';
+const description = 'Smart subscription and asset management assistant that helps you track all your services effortlessly.';
+---
+
+<AppLayout title={title} description={description} current="meowmemo">
+  <div class="hero-section">
+    <div class="hero-content">
+      <h1>MeowMemo</h1>
+      <p class="subtitle">Smart subscription and asset management assistant</p>
+      <div class="app-store-button">
+        <!-- TODO: add app store link -->
+        <a href="#" target="_blank" rel="noopener">
+          <img src="/assets/meowmemo/screenshot-1.jpg" alt="Download on the App Store" />
+        </a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="/assets/meowmemo/screenshot-1.jpg" alt="MeowMemo App Screenshot" />
+    </div>
+  </div>
+
+  <section class="features">
+    <h2>Key Features</h2>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <span class="icon">📱</span>
+        <h3>Smart Subscription Management</h3>
+        <p>Track all your subscriptions in one place with intelligent categorization.</p>
+      </div>
+      <div class="feature-card">
+        <span class="icon">⏰</span>
+        <h3>Intelligent Reminders</h3>
+        <p>Never miss a payment with smart notifications and renewal reminders.</p>
+      </div>
+      <div class="feature-card">
+        <span class="icon">📊</span>
+        <h3>Data Analytics</h3>
+        <p>Visualize your spending patterns and optimize your subscriptions.</p>
+      </div>
+      <div class="feature-card">
+        <span class="icon">🔄</span>
+        <h3>iCloud Sync</h3>
+        <p>Seamlessly sync your data across all your Apple devices.</p>
+      </div>
+    </div>
+  </section>
+</AppLayout>
+
+<style>
+  .hero-section {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    margin-bottom: 4rem;
+  }
+
+  .hero-content {
+    flex: 1;
+  }
+
+  h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .subtitle {
+    font-size: 1.5rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+  }
+
+  .app-store-button img {
+    height: 50px;
+    width: auto;
+  }
+
+  .hero-image {
+    flex: 1;
+    max-width: 400px;
+  }
+
+  .hero-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  }
+
+  .features {
+    margin-top: 6rem;
+  }
+
+  h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+
+  .feature-card {
+    padding: 2rem;
+    background: var(--card-background);
+    border-radius: 16px;
+    text-align: center;
+  }
+
+  .icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    display: block;
+  }
+
+  .feature-card h3 {
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+  }
+
+  .feature-card p {
+    color: var(--text-secondary);
+  }
+
+  @media (max-width: 768px) {
+    .hero-section {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+    }
+
+    .subtitle {
+      font-size: 1.2rem;
+    }
+  }
+</style> 

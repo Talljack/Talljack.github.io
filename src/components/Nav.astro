@@ -1,6 +1,8 @@
 ---
 import ThemeToggleButton from './ThemeToggleButton.svelte';
 const { current = '' } = Astro.props;
+const appsPages = ["meowmemo"];
+const isAppPage = appsPages.some(page => current.startsWith(page));
 ---
 
 <style>
@@ -12,6 +14,11 @@ const { current = '' } = Astro.props;
     font-weight: 700;
     justify-content: flex-end;
     text-transform: uppercase;
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
   }
 
   a {
@@ -50,6 +57,93 @@ const { current = '' } = Astro.props;
     background: var(--primary-color);
   }
 
+  /* Dropdown styles */
+  .dropdown {
+    position: relative;
+    margin-left: 20px;
+  }
+
+  .dropdown-trigger {
+    color: inherit;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 10px 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    opacity: 0.7;
+    font-family: var(--font-family-sans);
+  }
+
+  .dropdown-trigger:hover {
+    opacity: 1;
+  }
+
+  .dropdown-content {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--background);
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 0.5rem;
+    min-width: 280px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 1000;
+  }
+
+  .dropdown:hover .dropdown-content {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .app-item {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    margin: 0;
+    border-radius: 8px;
+    transition: background-color 0.2s;
+    text-align: left;
+    opacity: 1;
+  }
+
+  .app-item:hover {
+    background-color: var(--hover-background);
+  }
+
+  .app-item::before {
+    display: none;
+  }
+
+  .app-item img {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    margin-right: 1rem;
+  }
+
+  .app-info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .app-name {
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.25rem;
+  }
+
+  .app-description {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    text-transform: none;
+    font-weight: normal;
+  }
+
   .theme-toggle-container {
     width: 75px;
   }
@@ -58,12 +152,17 @@ const { current = '' } = Astro.props;
     .theme-toggle-container {
       margin-right: 1em;
     }
-  }
 
+    .dropdown-content {
+      left: 0;
+      transform: none;
+    }
+  }
 </style>
 
 <nav>
   <a class={current === "" ? "selected" : ""} href='/'>home</a>
+  <a class={isAppPage || current === "apps" ? "selected" : ""} href='/apps'>apps</a>
   <a class={current === "about" ? "selected" : ""} href='/about'>about</a>
   <a class={current === "blog" ? "selected" : ""} href='/blog'>blog</a>
   <a class={current === "projects" ? "selected" : ""} href='/projects'>projects</a>
@@ -71,3 +170,40 @@ const { current = '' } = Astro.props;
     <ThemeToggleButton client:load />
   </div>
 </nav>
+
+<script>
+  // 添加键盘导航支持
+  const dropdown = document.querySelector('.dropdown');
+  const trigger = dropdown.querySelector('.dropdown-trigger');
+  const content = dropdown.querySelector('.dropdown-content');
+  const items = content.querySelectorAll('a');
+
+  trigger.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ' || e.key === 'ArrowDown') {
+      e.preventDefault();
+      content.style.opacity = '1';
+      content.style.visibility = 'visible';
+      items[0]?.focus();
+    }
+  });
+
+  items.forEach((item, index) => {
+    item.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowDown') {
+        e.preventDefault();
+        items[index + 1]?.focus();
+      } else if (e.key === 'ArrowUp') {
+        e.preventDefault();
+        if (index === 0) {
+          trigger.focus();
+        } else {
+          items[index - 1]?.focus();
+        }
+      } else if (e.key === 'Escape') {
+        content.style.opacity = '0';
+        content.style.visibility = 'hidden';
+        trigger.focus();
+      }
+    });
+  });
+</script>

@@ -1,0 +1,116 @@
+---
+import AppLayout from '../../layouts/AppLayout.astro'
+
+const title = 'Terms of Use - MeowMemo'
+const description = 'Terms of Use for MeowMemo app'
+---
+
+<AppLayout title={title} description={description} current="meowmemo/terms">
+  <div class="terms-container">
+    <h1>Terms of Use</h1>
+    <p class="last-updated">Last updated: {new Date().toLocaleDateString()}</p>
+
+    <section>
+      <h2>Acceptance of Terms</h2>
+      <p>By downloading and using MeowMemo, you agree to these terms.</p>
+    </section>
+
+    <section>
+      <h2>License</h2>
+      <p>MeowMemo grants you a limited, non-exclusive license to use the app for personal use.</p>
+    </section>
+
+    <section>
+      <h2>Restrictions</h2>
+      <p>You may not:</p>
+      <ul>
+        <li>Modify or create derivative works</li>
+        <li>Reverse engineer the app</li>
+        <li>Use the app for illegal purposes</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Termination</h2>
+      <p>We may terminate or suspend your access immediately for any violation of these Terms.</p>
+    </section>
+
+    <section>
+      <h2>Changes to Terms</h2>
+      <p>We reserve the right to modify these terms at any time. We will notify users of any material changes to these terms.</p>
+    </section>
+
+    <section>
+      <h2>Contact</h2>
+      <p>
+        Questions about the Terms should be sent to:
+        <a href="mailto:yugang.cao12@gmail.com">yugang.cao12@gmail.com</a>
+      </p>
+    </section>
+  </div>
+</AppLayout>
+
+<style>
+  .terms-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+  }
+
+  .last-updated {
+    color: var(--text-secondary);
+    margin-bottom: 3rem;
+  }
+
+  section {
+    margin-bottom: 3rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+  }
+
+  p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+
+  ul {
+    list-style-type: disc;
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-secondary);
+  }
+
+  li {
+    margin-bottom: 0.5rem;
+  }
+
+  a {
+    color: var(--primary-color);
+    text-decoration: none;
+  }
+
+  @media (max-width: 768px) {
+    .terms-container {
+      padding: 1rem;
+    }
+
+    h1 {
+      font-size: 2rem;
+    }
+
+    h2 {
+      font-size: 1.3rem;
+    }
+  }
+</style> 

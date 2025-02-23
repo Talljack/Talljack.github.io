@@ -1,0 +1,213 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title = 'Apps - Talljack';
+const description = 'Discover our innovative apps designed to make your life easier';
+const permalink = `${Astro.site.href}apps`;
+
+const apps = [
+  {
+    name: 'MeowMemo',
+    description: 'Smart subscription and asset management assistant that helps you track all your services effortlessly.',
+    icon: '/assets/meowmemo/logo.png',
+    path: '/meowmemo',
+    features: [
+      'Smart Subscription Management',
+      'Intelligent Reminders',
+      'Data Analytics',
+      'iCloud Sync'
+    ],
+    appStoreLink: '#',
+    // screenshots: [
+    //   '/assets/meowmemo/screenshot-1.jpg',
+    //   '/assets/meowmemo/screenshot-2.jpg'
+    // ]
+  }
+  // 未来可以在这里添加更多应用
+];
+---
+
+<BaseLayout title={title} description={description} permalink={permalink} current="apps">
+  <div class="apps-container">
+    <h1>Our Apps</h1>
+    <p class="subtitle">Discover our innovative apps designed to make your life easier</p>
+
+    <div class="apps-grid">
+      {apps.map(app => (
+        <div class="app-card">
+          <div class="app-header">
+            <img src={app.icon} alt={app.name} class="app-icon" />
+            <div class="app-title">
+              <h2>{app.name}</h2>
+              <p>{app.description}</p>
+            </div>
+          </div>
+
+          <div class="app-screenshots">
+            {app.screenshots?.map(screenshot => (
+              <img src={screenshot} alt={`${app.name} screenshot`} />
+            ))}
+          </div>
+
+          <div class="app-features">
+            <h3>Key Features</h3>
+            <ul>
+              {app.features.map(feature => (
+                <li>{feature}</li>
+              ))}
+            </ul>
+          </div>
+
+          <div class="app-actions">
+            <a href={app.path} class="learn-more">Learn More</a>
+            {/* TODO: add app store link */}
+            <a href={app.appStoreLink} class="app-store-link">
+              <img src="/assets/app-store-badge.svg" alt="Download on the App Store" />
+            </a>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .apps-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .subtitle {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    margin-bottom: 3rem;
+  }
+
+  .apps-grid {
+    display: grid;
+    gap: 2rem;
+  }
+
+  .app-card {
+    background: var(--card-background);
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .app-header {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .app-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 16px;
+  }
+
+  .app-title h2 {
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+  }
+
+  .app-title p {
+    color: var(--text-secondary);
+    line-height: 1.5;
+  }
+
+  .app-screenshots {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .app-screenshots img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .app-features {
+    margin-bottom: 2rem;
+  }
+
+  .app-features h3 {
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+  }
+
+  .app-features ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+  }
+
+  .app-features li {
+    color: var(--text-secondary);
+    padding-left: 1.5rem;
+    position: relative;
+  }
+
+  .app-features li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+  }
+
+  .app-actions {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .learn-more {
+    padding: 0.8rem 1.5rem;
+    background: var(--primary-color);
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: transform 0.2s;
+  }
+
+  .learn-more:hover {
+    transform: translateY(-2px);
+  }
+
+  .app-store-link img {
+    height: 40px;
+    width: auto;
+  }
+
+  @media (max-width: 768px) {
+    .app-header {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .app-icon {
+      margin: 0 auto;
+    }
+
+    .app-actions {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+</style> 

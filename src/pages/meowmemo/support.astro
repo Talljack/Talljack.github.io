@@ -1,0 +1,170 @@
+---
+import AppLayout from '../../layouts/AppLayout.astro'
+
+const title = 'Support - MeowMemo'
+const description = 'Get help and support for MeowMemo app'
+---
+
+<AppLayout title={title} description={description} current="meowmemo/support">
+  <div class="support-container">
+    <h1>Support Center</h1>
+
+    <section class="faq-section">
+      <h2>Frequently Asked Questions</h2>
+
+      <div class="faq-grid">
+        <div class="faq-item">
+          <h3>How do I add a new subscription?</h3>
+          <ol>
+            <li>Tap the "+" button</li>
+            <li>Choose subscription type</li>
+            <li>Fill in the details</li>
+            <li>Tap "Save"</li>
+          </ol>
+        </div>
+
+        <div class="faq-item">
+          <h3>How do I enable notifications?</h3>
+          <ol>
+            <li>Go to Settings</li>
+            <li>Tap "Notifications"</li>
+            <li>Enable the features you need</li>
+          </ol>
+        </div>
+
+        <div class="faq-item">
+          <h3>How does iCloud sync work?</h3>
+          <p>MeowMemo doesn't use iCloud sync. But when upgrade to the pro version, you can sync your data across devices using your iCloud account.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section">
+      <h2>Contact Support</h2>
+      <p>Need help? We're here for you!</p>
+
+      <div class="contact-info">
+        <div class="contact-item">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+            <polyline points="22,6 12,13 2,6"></polyline>
+          </svg>
+          <div>
+            <h3>Email Support</h3>
+            <p><a href="mailto:yugang.cao12@gmail.com">yugang.cao12@gmail.com</a></p>
+            <p class="response-time">Response time: Within 24 hours</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</AppLayout>
+
+<style>
+  .support-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: var(--text-primary);
+  }
+
+  section {
+    margin-bottom: 4rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    color: var(--text-primary);
+  }
+
+  .faq-grid {
+    display: grid;
+    gap: 2rem;
+  }
+
+  .faq-item {
+    background: var(--card-background);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .faq-item h3 {
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+  }
+
+  ol {
+    list-style-position: inside;
+    color: var(--text-secondary);
+  }
+
+  li {
+    margin-bottom: 0.5rem;
+  }
+
+  .contact-info {
+    display: grid;
+    gap: 2rem;
+  }
+
+  .contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    background: var(--card-background);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .contact-item svg {
+    color: var(--primary-color);
+  }
+
+  .contact-item h3 {
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+  }
+
+  .contact-item a {
+    color: var(--primary-color);
+    text-decoration: none;
+  }
+
+  .response-time {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+  }
+
+  @media (max-width: 768px) {
+    .support-container {
+      padding: 1rem;
+    }
+
+    h1 {
+      font-size: 2rem;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+    }
+
+    .contact-item {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .contact-item svg {
+      margin: 0 auto;
+    }
+  }
+</style>
